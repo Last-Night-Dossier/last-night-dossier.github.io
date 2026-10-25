@@ -1,0 +1,25 @@
+@font-face{font-family:"Big Shoulders Display";src:url(fonts/BigShouldersDisplay-Variable.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Newsreader";src:url(fonts/Newsreader-Variable.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(fonts/IBMPlexMono-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+:root{--ground:#0d1015;--raised:#161b23;--ink:#ece4d2;--muted:#a39b8a;--line:#2e3642;--amber:#f2b441;--red:#e0533f;--manila:#c9a465}
+@media (prefers-color-scheme:light){:root{--ground:#efe7d6;--raised:#f8f3e8;--ink:#17140f;--muted:#5b5345;--line:#b8aa8e;--amber:#9a6a0a;--red:#b8382a}}
+*{box-sizing:border-box}
+html{background:var(--ground);color:var(--ink)}
+body{margin:0;font:18px/1.6 "Newsreader",Georgia,serif;min-height:100vh;display:flex;flex-direction:column}
+main{flex:1;width:100%;max-width:720px;margin:0 auto;padding:48px 20px 64px}
+header.site{border-bottom:1px solid var(--line)}
+header.site .in{max-width:720px;margin:0 auto;padding:18px 20px;display:flex;align-items:center;gap:14px}
+header.site img{width:40px;height:40px;border-radius:50%}
+header.site a{color:var(--ink);text-decoration:none;font:600 22px/1 "Big Shoulders Display",Impact,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.kicker{font:13px/1.4 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin:0 0 10px}
+h1{font:700 clamp(40px,8vw,64px)/1 "Big Shoulders Display",Impact,sans-serif;letter-spacing:.02em;text-transform:uppercase;margin:0 0 20px}
+h2{font:600 26px/1.15 "Big Shoulders Display",Impact,sans-serif;letter-spacing:.04em;text-transform:uppercase;margin:40px 0 10px}
+p,li{color:var(--ink)} .muted{color:var(--muted)}
+a{color:var(--amber)}
+.wordmark{display:block;width:min(360px,80%);height:auto;margin:0 0 28px}
+.cta{display:inline-block;margin-top:12px;padding:12px 18px;border:1px solid var(--amber);color:var(--amber);text-decoration:none;font:15px/1 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
+.cta:hover{background:var(--amber);color:var(--ground)}
+footer{border-top:1px solid var(--line);font:13px/1.6 "IBM Plex Mono",monospace;color:var(--muted)}
+footer .in{max-width:720px;margin:0 auto;padding:18px 20px;display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted)}
+@media (prefers-color-scheme:light){.wordmark{filter:invert(1) hue-rotate(180deg)}}
